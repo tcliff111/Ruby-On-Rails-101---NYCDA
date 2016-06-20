@@ -3,6 +3,9 @@
 # count is divisible by 3 you print "Fizz".  Else, if the count is divisible by 5 you
 # print "Buzz".  Else you end up just printing the count number.
 
+#You check divisibility using mod (%) which just tells you the remainder after division.
+# So if num % 15 == 0, then num/15 is an integer with no remainder and num is divisible by 15
+
 def fizzbuzz(num)
   #You are checking the parameter num
   case
