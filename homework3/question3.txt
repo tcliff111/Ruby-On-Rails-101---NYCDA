@@ -1,0 +1,3 @@
+A GET request on the client side asks the server for information which then will be sent back from the server to the client.
+
+A POST request is when the client submits data to the server.  The server will then do whatever it needs to with the information and sometimes would then send something back to the client based on the data, but not always.
