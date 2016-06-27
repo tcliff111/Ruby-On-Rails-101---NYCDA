@@ -1,0 +1,16 @@
+<h2>Contact</h2>
+<br />
+<%= form_tag('/contact') do %>
+ <%= text_field_tag(:name, '', placeholder: 'Enter your name here') %> <br />
+ <%= text_field_tag(:email, '', placeholder: 'Enter your email here') %> <br />
+ <%= text_field_tag(:phone, '', placeholder: 'Enter your phone number here') %> <br />
+
+ <%= submit_tag('Submit') %>
+<% end %>
+
+<% if params[:name] && params[:email] && params[:phone] && params[:name] != "" && params[:email] != "" && params[:phone] != "" %>
+	<h4>Contact Information</h4>
+	<%= "Name: " + params[:name] %> <br />
+	<%= "Email: " + params[:email] %> <br />
+	<%= "Phone: " + params[:phone] %>
+<% end %>

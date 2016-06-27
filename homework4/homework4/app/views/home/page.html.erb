@@ -1,0 +1,33 @@
+
+<h1>
+<% if params[:name] %>
+<%= params[:name] + "'s Item List" %>
+<% else %>
+<%= "Tom's Item List" %>
+<% end %>
+</h1>
+
+<% if !params[:items] %>
+<% items = ["Orange", "Apple", "Pear", "Ice", "Canada"] %>
+<% else %>
+<% items = params[:items].split(",") %>
+<% end %>
+<table>
+	<% for item in items %>
+		<tr class="item">
+			<td>Item: </td>
+			<td><%= item %></td>
+		</tr>
+	<% end %>
+</table>
+
+<p>
+<%= "There " %>
+<% if items.length == 1%>
+<%=  "is" %>
+<% else %>
+<%=  "are" %>
+<% end %>
+<%= pluralize(items.length, "item") %>
+<%= " in the basket!" %>
+</p>
