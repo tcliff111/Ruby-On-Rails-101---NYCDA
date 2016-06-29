@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+.w_on_b {
+	color: white;
+	background-color: black;
+}
+
+.default {
+	color: black;
+	background-color: white;
+}

@@ -1,0 +1,37 @@
+<% require 'cgi' %>
+
+<h2>Blog</h2>
+
+<%= link_to 'Home', action='index' %>
+
+<% for post in @posts %>
+	<% theme = "default" %>
+	<% if post.theme %>
+		<% theme = post.theme %>
+	<% end %>
+	<%= ("<div class='" + theme + "'>").html_safe %>
+		<br />
+		<hr>
+		<h3>
+			<%= post.title %>
+		</h3>
+		<i>
+			<%= post.created_at.to_formatted_s(:long_ordinal) %>
+		</i>
+		<br />
+		<br />
+		<% if post.image_url %>
+			<%= ("<img width='300px' src='" + CGI.escapeHTML(post.image_url) + "'>").html_safe %>
+		<% end %>
+		<% if post.author %>
+			<h4>
+				<%= "By " + post.author %>
+			</h4>
+		<% end %>
+		<% if post.text %>
+			<p>
+				<%= post.text %>
+			</p>
+		<% end %>
+	<%= "</div>".html_safe %>
+<% end %>

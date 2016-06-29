@@ -1,0 +1,35 @@
+Database Schema for a basic Wikipedia:
+
+table Article
+	id:integer
+	title:string
+	intro:text
+	main_image_url:string
+	url:string
+
+table Subheading
+	id:integer
+	title:string
+	body:text
+	section_number:integer
+	article_id:integer
+
+table Citation
+	id:integer
+	authors:string
+	url:string
+	retrieval_date:datetime
+	article_id:integer
+	citation_number:integer
+
+table Category
+	id:integer
+	name:string
+
+table ArticleCategoryJoinTable
+	id:integer
+	category_id:integer
+	article_id:integer
+	
+
+

@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 	end
 
 	def other
-		
+		@posts = Post.all
 	end
 
 end
