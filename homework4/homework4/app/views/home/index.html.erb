@@ -1,8 +1,7 @@
 <h1 id="hey">Hey</h1>
 <br />
-<% for i in 1..10 %>
-<%= i %>
-<%= ". " + @string %>
+<% (1..10).each do |i| %>
+<%= "#{i}. #{@string}" %>
 <br />
 <% end %>
 

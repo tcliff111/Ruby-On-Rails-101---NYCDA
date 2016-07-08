@@ -1,0 +1,10 @@
+<% require 'cgi' %>
+
+<h2>Blog</h2>
+
+
+<%= link_to "New Post", controller: "posts", action: "new" %>
+
+<% for post in @posts %>
+	<%= render "partials/post", post: post %>
+<% end %>

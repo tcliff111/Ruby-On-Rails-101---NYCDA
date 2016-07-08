@@ -8,9 +8,9 @@
  <%= submit_tag('Submit') %>
 <% end %>
 
-<% if params[:name] && params[:email] && params[:phone] && params[:name] != "" && params[:email] != "" && params[:phone] != "" %>
+<% if params[:name].present? && params[:email].present? && params[:phone].present?%>
 	<h4>Contact Information</h4>
-	<%= "Name: " + params[:name] %> <br />
-	<%= "Email: " + params[:email] %> <br />
-	<%= "Phone: " + params[:phone] %>
+	Name: <%= params[:name] %> <br />
+	Email: <%= params[:email] %> <br />
+	Phone: <%= params[:phone] %>
 <% end %>

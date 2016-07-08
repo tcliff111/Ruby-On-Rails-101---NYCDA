@@ -1,0 +1,18 @@
+
+<%= link_to 'Login', action: 'login' %>
+
+<%= link_to 'Register', action: 'register' %>
+
+<h3>Last Tweets:</h3>
+
+<hr>
+<% @tweets.each do |tweet| %>
+	<%= tweet.text %>
+	&nbsp;&nbsp;&nbsp;
+	<%= tweet.created_at.to_formatted_s(:long_ordinal) %>
+	<br>
+	<i>
+	Tweeted by: <%= tweet.user.username %>
+	</i>
+	<hr>
+<% end %>

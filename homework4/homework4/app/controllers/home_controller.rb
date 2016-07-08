@@ -4,12 +4,5 @@ class HomeController < ApplicationController
 		@string = "Test"
 	end
 
-	def page
-		
-	end
-
-	def contact
-
-	end
 
 end

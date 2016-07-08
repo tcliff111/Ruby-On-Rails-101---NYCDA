@@ -1,0 +1,12 @@
+
+<% if !session[:user] %>
+	<%= form_for @user do |f| %>
+		<%= f.label :username %>
+		<%= f.text_field :username %>
+		<%= f.label :password %>
+		<%= f.text_field :password %>
+		<%= f.submit :create %>
+	<% end %>
+<% else %>
+	<h3>Log out</h3>
+<% end %>
