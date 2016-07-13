@@ -1,0 +1,20 @@
+<% events.each do |event| %>
+	<br>
+	<hr>
+	<h3><%= event.name %></h3>
+	<% date = event.date %>
+	<div class="month">
+		<%= date.strftime("%b") %>
+	</div>
+	<div class="day">
+		<%= date.strftime("%d") %>
+	</div>
+	<span class="time">
+		<%= date.strftime("%I:%M %p") %>
+	</span>
+	&#160;
+	<b><%= event.description %></b>
+	&#160;
+	<i><%= event.location %></i>
+	<br>
+<% end %>
